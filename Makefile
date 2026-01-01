@@ -1,4 +1,4 @@
-.PHONY: build clean lint lint-fix format test test-unit test-integration test-all test-cov
+.PHONY: build clean lint lint-fix format test test-unit test-integration test-all test-cov publish publish-test
 
 build:
 	python -m build
@@ -36,3 +36,11 @@ test-all:
 # Run tests with coverage report
 test-cov:
 	pytest tests -v --ignore=tests/integration --cov=scrapy_zenrows --cov-report=term-missing --cov-report=html
+
+# Publish to PyPI (requires ~/.pypirc or TWINE_USERNAME/TWINE_PASSWORD)
+publish: clean build
+	twine upload dist/*
+
+# Publish to TestPyPI first (for testing)
+publish-test: clean build
+	twine upload --repository testpypi dist/*
