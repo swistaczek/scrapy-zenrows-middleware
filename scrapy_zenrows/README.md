@@ -32,7 +32,7 @@ ZenRows makes it easy to bypass complex anti-bot measures, handle JavaScript-hea
 ## Installation
 
 ```bash
-pip install scrapy-zenrows
+pip install scrapy-zenrows-middleware
 ```
 
 ## Usage
@@ -76,7 +76,7 @@ If you have multiple spiders and don't want to apply global premium proxy and JS
 For example, to set Premium Proxy and JS Rendering for a specific request:
 
 ```python
-# pip install scrapy-zenrows
+# pip install scrapy-zenrows-middleware
 from scrapy_zenrows import ZenRowsRequest
 
 class YourSpider(scrapy.Spider):
@@ -319,21 +319,21 @@ yield ZenRowsRequest(
 
 Here are example spider demonstrating how to use the `scrapy_zenrows` middleware:
 
-- **[antibot_bypass_spider](https://github.com/ZenRows/scrapy-zenrows-middleware/blob/main/examples/examples/examples/spiders/antibot_bypass_spider.py)**: Demonstrates the basic usage of the ZenRows Scraper API for bypassing anti-bots.
-- **[concurrent_ecommerce_spider](https://github.com/ZenRows/scrapy-zenrows-middleware/blob/main/examples/examples/examples/spiders/concurrent_ecommerce_spider.py)**: Scraping concurrently with Scrapy while using `ZenRowsRequest`.
-- **[custom_headers_spider](https://github.com/ZenRows/scrapy-zenrows-middleware/blob/main/examples/examples/examples/spiders/custom_headers_spider.py)**: Shows how to specify custom headers, including Cookies while using `ZenRowsRequest`.
-- **[pagination_spider](https://github.com/ZenRows/scrapy-zenrows-middleware/blob/main/examples/examples/examples/spiders/pagination_spider.py)**: Shows how to implement pagination in Scrapy while using `ZenRowsRequest`.
-- **[screenshot_spider](https://github.com/ZenRows/scrapy-zenrows-middleware/blob/main/examples/examples/examples/spiders/screenshot_spider.py)**: Demonstrates how to add screenshot capability to Scrapy with the ZenRows Scraper API.
-- **[table_parsing_spider](https://github.com/ZenRows/scrapy-zenrows-middleware/blob/main/examples/examples/examples/spiders/table_parsing_spider.py)**: Examples showing how to parse a table using the `outputs` feature of the ZenRows Scraper API. Check the [supported outputs](https://docs.zenrows.com/scraper-api/features/output) for more information.
+- **[antibot_bypass_spider](examples/zenrows_examples/spiders/antibot_bypass_spider.py)**: Demonstrates the basic usage of the ZenRows Scraper API for bypassing anti-bots.
+- **[concurrent_ecommerce_spider](examples/zenrows_examples/spiders/concurrent_ecommerce_spider.py)**: Scraping concurrently with Scrapy while using `ZenRowsRequest`.
+- **[custom_headers_spider](examples/zenrows_examples/spiders/custom_headers_spider.py)**: Shows how to specify custom headers, including Cookies while using `ZenRowsRequest`.
+- **[pagination_spider](examples/zenrows_examples/spiders/pagination_spider.py)**: Shows how to implement pagination in Scrapy while using `ZenRowsRequest`.
+- **[screenshot_spider](examples/zenrows_examples/spiders/screenshot_spider.py)**: Demonstrates how to add screenshot capability to Scrapy with the ZenRows Scraper API.
+- **[table_parsing_spider](examples/zenrows_examples/spiders/table_parsing_spider.py)**: Examples showing how to parse a table using the `outputs` feature of the ZenRows Scraper API. Check the [supported outputs](https://docs.zenrows.com/scraper-api/features/output) for more information.
 
 ### New in v1.1.0
 
-- **[session_spider](https://github.com/ZenRows/scrapy-zenrows-middleware/blob/main/examples/examples/examples/spiders/session_spider.py)**: Multi-step session-based scraping with IP persistence using `session_id`.
-- **[dynamic_content_spider](https://github.com/ZenRows/scrapy-zenrows-middleware/blob/main/examples/examples/examples/spiders/dynamic_content_spider.py)**: Scraping SPAs and dynamic content using `wait_for`.
-- **[optimized_spider](https://github.com/ZenRows/scrapy-zenrows-middleware/blob/main/examples/examples/examples/spiders/optimized_spider.py)**: High-performance scraping with `block_resources`.
-- **[ai_pipeline_spider](https://github.com/ZenRows/scrapy-zenrows-middleware/blob/main/examples/examples/examples/spiders/ai_pipeline_spider.py)**: Extracting content for AI/LLM pipelines using `response_type`.
+- **[session_spider](examples/zenrows_examples/spiders/session_spider.py)**: Multi-step session-based scraping with IP persistence using `session_id`.
+- **[dynamic_content_spider](examples/zenrows_examples/spiders/dynamic_content_spider.py)**: Scraping SPAs and dynamic content using `wait_for`.
+- **[optimized_spider](examples/zenrows_examples/spiders/optimized_spider.py)**: High-performance scraping with `block_resources`.
+- **[ai_pipeline_spider](examples/zenrows_examples/spiders/ai_pipeline_spider.py)**: Extracting content for AI/LLM pipelines using `response_type`.
 
-Examples directory: [examples](https://github.com/ZenRows/scrapy-zenrows-middleware/blob/main/examples/examples/examples/spiders/)
+Examples directory: [examples/](examples/)
 
 👉🏼 **[Official scrapy-zenrows integration documentation](https://docs.zenrows.com/scraping-api/integrations/scrapy)**
 

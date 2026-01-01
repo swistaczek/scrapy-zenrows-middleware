@@ -16,7 +16,13 @@
 
 ZenRows® offers an advanced web scraping suite designed to simplify data collection, processing, and management. Whether you're looking for scalable data extraction, a reliable browser solution for handling dynamic websites, or residential proxies to access location-specific content, we provide the ideal tools for your unique needs.
 
-This repository hosts `scrapy-zenrows`, the Scrapy middleware that allows you to easily integrate Scrapy with the ZenRows Scraper API for web scraping. Each folder includes installation instructions and detailed documentation.
+This repository hosts `scrapy-zenrows-middleware`, the Scrapy middleware that allows you to easily integrate Scrapy with the ZenRows Scraper API for web scraping.
+
+## Installation
+
+```bash
+pip install scrapy-zenrows-middleware
+```
 
 ## Table of Contents
 
