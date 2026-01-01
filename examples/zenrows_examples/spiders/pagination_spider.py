@@ -1,4 +1,5 @@
 import scrapy
+
 from scrapy_zenrows import ZenRowsRequest
 
 
@@ -24,9 +25,7 @@ class PaginationSpider(scrapy.Spider):
 
         # stop if 404 error (end of pagination)
         if status == 404:
-            self.logger.info(
-                f"Reached the end of pagination. Stopping at URL: {response.url}"
-            )
+            self.logger.info(f"Reached the end of pagination. Stopping at URL: {response.url}")
             return
 
         # extract product data

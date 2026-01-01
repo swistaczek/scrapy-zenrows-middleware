@@ -1,8 +1,6 @@
 import scrapy
-from scrapy.crawler import CrawlerProcess
+
 from scrapy_zenrows import ZenRowsRequest
-from scrapy.utils.log import configure_logging
-import logging
 
 
 class ConcurrentEcommerceSpider(scrapy.Spider):

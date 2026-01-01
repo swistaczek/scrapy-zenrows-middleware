@@ -1,5 +1,5 @@
 import scrapy
-from scrapy.crawler import CrawlerProcess
+
 from scrapy_zenrows import ZenRowsRequest
 
 

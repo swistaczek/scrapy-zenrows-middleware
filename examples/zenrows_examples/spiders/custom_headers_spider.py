@@ -1,6 +1,8 @@
-import scrapy
-from scrapy_zenrows import ZenRowsRequest
 import json
+
+import scrapy
+
+from scrapy_zenrows import ZenRowsRequest
 
 
 class SimpleCustomHeadersSpider(scrapy.Spider):

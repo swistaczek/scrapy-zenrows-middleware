@@ -1,7 +1,9 @@
-import scrapy
-from scrapy_zenrows import ZenRowsRequest
 import base64
 import json
+
+import scrapy
+
+from scrapy_zenrows import ZenRowsRequest
 
 
 class ScreenshotSpider(scrapy.Spider):
@@ -40,9 +42,7 @@ class ScreenshotSpider(scrapy.Spider):
                     f.write(image_data)
 
                 self.logger.info(f"Screenshot saved as {filename}")
-                self.logger.info(
-                    f"Image dimensions: {screenshot_data['width']}x{screenshot_data['height']} pixels"
-                )
+                self.logger.info(f"Image dimensions: {screenshot_data['width']}x{screenshot_data['height']} pixels")
 
                 # yield screenshot information
                 yield {
