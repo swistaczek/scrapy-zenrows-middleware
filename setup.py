@@ -1,8 +1,12 @@
+import re
 from pathlib import Path
 
 from setuptools import find_packages, setup
 
-from scrapy_zenrows.__version__ import __version__
+# Read version without importing the module
+version_file = Path(__file__).parent / "scrapy_zenrows" / "__version__.py"
+version_match = re.search(r'__version__\s*=\s*["\']([^"\']+)["\']', version_file.read_text())
+__version__ = version_match.group(1) if version_match else "0.0.0"
 
 # Read long description from README
 readme_path = Path(__file__).parent / "scrapy_zenrows" / "README.md"
