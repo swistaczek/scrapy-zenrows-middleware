@@ -7,7 +7,7 @@ name = "scrapy-zenrows-middleware"
 dynamic = ["version"]
 description = "A Scrapy middleware for accessing ZenRows Scraper API with minimal setup."
 readme = "scrapy_zenrows/README.md"
-license = "MIT"
+license = {text = "MIT"}
 authors = [
     {name = "Idowu Omisola and Yuvraj Chandra", email = "support@zenrows.com"}
 ]
