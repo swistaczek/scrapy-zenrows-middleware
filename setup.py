@@ -13,7 +13,7 @@ readme_path = Path(__file__).parent / "scrapy_zenrows" / "README.md"
 long_description = readme_path.read_text(encoding="utf-8")
 
 setup(
-    name="scrapy-zenrows",
+    name="scrapy-zenrows-middleware",
     version=__version__,
     description="A Scrapy middleware for accessing ZenRows Scraper API with minimal setup.",
     long_description=long_description,
